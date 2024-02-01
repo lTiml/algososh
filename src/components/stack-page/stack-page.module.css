@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+}
+
+.input {
+	width: 377px;
+}
+
+.clean {
+	margin-left: 68px;
+}
+
+.wrapper {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	gap: 16px;
+	justify-content: center;
+	margin-top: 78px;
+}

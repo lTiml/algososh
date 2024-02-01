@@ -1,0 +1,19 @@
+.input {
+	max-width: 522px;
+	width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+	gap: 12px;
+	align-self: center;
+}
+
+.invertString {
+	display: flex;
+	gap: 16px;
+	position: absolute;
+	left: 50%;
+	margin-top: 120px;
+	transform: translate(-50%);
+}
