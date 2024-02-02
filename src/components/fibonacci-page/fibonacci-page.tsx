@@ -1,14 +1,14 @@
 import styles from "./fibonacci.module.css";
 
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { SolutionLayout } from "../ui/solution-layout/solution-layout";
 import { fibonacciDelay } from "./fibonacci.utils";
 import { Input } from "../ui/input/input";
 import { Button } from "../ui/button/button";
 import { Circle } from "../ui/circle/circle";
 
-export const FibonacciPage: React.FC = () => {
-	const [number, setNumber] = useState<number>(0);
+export const FibonacciPage = () => {
+	const [number, setNumber] = useState<number>();
 	const [loading, setLoading] = useState(false);
 	const [fibonacciArr, setFibonacciArr] = useState<Array<number>>([]);
 
@@ -29,7 +29,7 @@ export const FibonacciPage: React.FC = () => {
 		 	className={styles.input}
 			onSubmit={(e:FormEvent) => handleSubmit(e)}
 		>
-			<Input value={number} isLimitText max={19} type="number" onChange={onChange} />
+			<Input value={number} isLimitText={true} max={19} maxLength={19} type="number" onChange={onChange} />
 			<Button text="Рассчитать" disabled={!number} isLoader={loading} type="submit" />
 		</form>
 		<ul className={styles.circles}>
