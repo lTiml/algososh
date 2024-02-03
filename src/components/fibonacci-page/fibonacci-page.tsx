@@ -8,7 +8,7 @@ import { Button } from "../ui/button/button";
 import { Circle } from "../ui/circle/circle";
 
 export const FibonacciPage = () => {
-	const [number, setNumber] = useState<number>();
+	const [number, setNumber] = useState<number>(0);
 	const [loading, setLoading] = useState(false);
 	const [fibonacciArr, setFibonacciArr] = useState<Array<number>>([]);
 
@@ -30,7 +30,7 @@ export const FibonacciPage = () => {
 			onSubmit={(e:FormEvent) => handleSubmit(e)}
 		>
 			<Input value={number} isLimitText={true} max={19} maxLength={19} type="number" onChange={onChange} />
-			<Button text="Рассчитать" disabled={!number} isLoader={loading} type="submit" />
+			<Button text="Рассчитать" disabled={number > 19 || number <= 0} isLoader={loading} type="submit" />
 		</form>
 		<ul className={styles.circles}>
 			{fibonacciArr.length !== 0 &&
