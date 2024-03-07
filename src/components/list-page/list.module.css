@@ -1,0 +1,52 @@
+.container {
+	max-width: 952px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.inputs {
+	width: 100%;
+	display: flex;
+	gap: 12px;
+}
+.input {
+	max-width: 204px;
+}
+.smallButton {
+	max-width: 175px;
+	width: 100%;
+}
+.button {
+	width: 100%;
+}
+.list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	margin-top: 90px;
+}
+
+.part {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding-left: 16px;
+}
+
+.circle {
+	position: relative;
+}
+
+.circleTop {
+	position: absolute;
+	top: -80px;
+	left: 10px;
+}
+
+.circleBottom {
+	position: absolute;
+	top: 120px;
+	left: 10px;
+}
