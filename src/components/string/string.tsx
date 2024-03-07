@@ -61,14 +61,14 @@ export const StringComponent = () => {
 				className={styles.input}
 				onSubmit={(e: React.FormEvent) => submitInput(e, string)}
 			>
-				<Input value={string} onChange={onChange} isLimitText maxLength={11} />
-				<Button type="submit" text="Развернуть" disabled={!string} isLoader={loading} />
+				<Input value={string} onChange={onChange} isLimitText maxLength={11} data-testid="inputString" />
+				<Button type="submit" text="Развернуть" disabled={!string} isLoader={loading} data-testid="button" />
 			</form>
-			<div className={styles.invertString}>
+			<div className={styles.invertString} data-testid="result">
 				{arrLetter &&
 					arrLetter.map((letter, index) => (
-						<div key={index}>
-							<Circle letter={String(letter.value)} state={letter.color} />
+						<div key={index} data-testid="id">
+							<Circle letter={String(letter.value)} state={letter.color} data-testid="resultCircle" />
 						</div>
 					))}
 			</div>
