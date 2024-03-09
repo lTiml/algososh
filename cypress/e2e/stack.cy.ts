@@ -13,7 +13,7 @@ describe("Stack", () => {
 	it("should correctly add value to stack", () => {
 		inputValues.forEach((value, index) => {
 			cy.get("input").type(value);
-			cy.contains("Добавить").type(value);
+			cy.contains("Добавить").click();
 			cy.get("[data-cy='circle']").contains(value);
 			cy.wait(DELAY_IN_MS);
 			cy.get("[data-cy='circle']").as("circleComponent");

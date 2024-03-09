@@ -1,4 +1,4 @@
-import { circleSelector } from "../../src/constants/e2e";
+import { circleWrapper } from "../../src/constants/e2e";
 
 const inputValues = ["1", "2", "3"];
 
@@ -14,7 +14,7 @@ describe("Queue", () => {
 		inputValues.forEach((value, index) => {
 			cy.get("input").type(value);
 			cy.contains("Добавить").click();
-			cy.get(circleSelector).as("circleWrapper").contains(value);
+			cy.get(circleWrapper).as("circleWrapper").contains(value);
 			cy.get("@circleWrapper").eq(index).should("contain", inputValues[index]);
 			if (index === 0) {
 				cy.get("@circleWrapper").should("contain", "tail").and("contain", "head")
@@ -27,7 +27,7 @@ describe("Queue", () => {
 		cy.contains("Добавить").click();
 		cy.get("input").type("1");
 		cy.contains("Добавить").click();
-		cy.get(circleSelector).as("circleComponent");
+		cy.get(circleWrapper).as("circleComponent");
 		cy.contains("Удалить").click();
 
 		cy.get("@circleComponent").each((item, index) => {
@@ -45,6 +45,6 @@ describe("Queue", () => {
 			cy.contains("Добавить").click();
 		})
 		cy.contains("Очистить").click();
-		cy.get(circleSelector).should("contain", "")
+		cy.get(circleWrapper).should("contain", "")
 	})
 })

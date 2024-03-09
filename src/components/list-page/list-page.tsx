@@ -18,9 +18,10 @@ export type TList = {
 	color: ElementStates;
 }
 
-const NewLinkedList = new LinkedList<string> (
-	Array.from({ length: 6}, () => randomNum(0, 99).toString())
-);
+// const NewLinkedList = new LinkedList<string> (
+// 	Array.from({ length: 6}, () => randomNum(0, 99).toString())
+// );
+const NewLinkedList = new LinkedList<string>(["1", "2", "3", "4", "5"]);
 
 export const ListPage = () => {
 	const [loading, setLoading] = useState(false);

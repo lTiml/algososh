@@ -4,7 +4,7 @@ import { DELAY_IN_MS } from "../../src/constants/delays";
 const arr = [1, 2, 3, 4, 5];
 describe("Linked list", () => {
 	beforeEach(() => {
-		cy.visit("list");
+		cy.visit('list');
 	})
 	it("should buttons be disable with empty input", () => {
 		cy.get("input").should("be.empty");
@@ -29,7 +29,7 @@ describe("Linked list", () => {
 		cy.contains("Добавить в head").click();
 		cy.get(circleModifiedStyle).contains("10");
 		cy.wait(DELAY_IN_MS);
-		cy.get(circleSelector)
+		cy.get(circleWrapper)
 			.should("have.length", 6).each((item, index) => {
 				index === 0 && expect(item).contain("10");
 				index === 0 && expect(item).contain("head");
@@ -53,22 +53,22 @@ describe("Linked list", () => {
 		cy.contains("button", "Удалить из head").click();
 		cy.get(circleChangingStyle).contains(arr[0]);
 		cy.wait(DELAY_IN_MS);
-		cy.get(circleSelector).first().contains("head");
-		cy.get(circleSelector).should("have.length", 4);
+		cy.get(circleWrapper).first().contains("head");
+		cy.get(circleWrapper).should("have.length", 4);
 	})
 	it("should delete from tail correctly", () => {
 		cy.contains("button", "Удалить из tail").click();
 		cy.get(circleChangingStyle).contains(arr[arr.length - 1]);
 		cy.wait(DELAY_IN_MS);
-		cy.get(circleSelector).last().contains("tail");
-		cy.get(circleSelector).last().contains(arr[arr.length - 2]);
-		cy.get(circleSelector).should("have.length", 4);
+		cy.get(circleWrapper).last().contains("tail");
+		cy.get(circleWrapper).last().contains(arr[arr.length - 2]);
+		cy.get(circleWrapper).should("have.length", 4);
 	});
 	it("should remove by index correctly", () => {
 		cy.get("input").last().type(arr[0].toString());
 		cy.contains("button", "Удалить по индексу").click();
-		cy.get(circleSelector).eq(0).find(circleChangingStyle);
+		cy.get(circleWrapper).eq(0).find(circleChangingStyle);
 		cy.get(circleChangingStyle).contains(arr[0]);
-		cy.get(circleSelector).should("have.length", 4);
+		cy.get(circleWrapper).should("have.length", 4);
 	});
 });

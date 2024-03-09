@@ -18,7 +18,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -41,7 +41,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   >
     <p
@@ -72,7 +72,7 @@ describe('Circle component', () => {
     Head
   </div>
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -102,7 +102,7 @@ describe('Circle component', () => {
         class="text text_type_input text_color_input mb-4 absolute head element"
       />
       <div
-        class="circle   default"
+        class="circle  default"
         data-cy="circle"
       >
         <p
@@ -120,7 +120,7 @@ describe('Circle component', () => {
     </div>
   </div>
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -143,7 +143,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -168,7 +168,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -195,7 +195,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -220,7 +220,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle  small default"
+    class="circle small default"
     data-cy="circle"
   />
   <p
@@ -243,7 +243,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   default"
+    class="circle  default"
     data-cy="circle"
   />
   <p
@@ -266,7 +266,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   changing"
+    class="circle  changing"
     data-cy="circle"
   />
   <p
@@ -289,7 +289,7 @@ describe('Circle component', () => {
     class="text text_type_input text_color_input mb-4 absolute head element"
   />
   <div
-    class="circle   modified"
+    class="circle  modified"
     data-cy="circle"
   />
   <p
@@ -345,4 +345,5 @@ describe('Circle component', () => {
 		const circle = render(<Circle {...defaultProps} state={ElementStates.Modified} />);
 		expect(circle.container.querySelector('.circle')).toHaveClass('modified')
 	});
+
 })

@@ -7,7 +7,7 @@ describe("StringComponent", () => {
 
 	it("should be disable button when input is empty", () => {
 		cy.get("input").should("be.empty");
-		cy.contains("Развернуть").should("be,disabled");
+		cy.contains("Развернуть").should("be.disabled");
 	})
 	it("should reverse correctly", () => {
 		cy.get("input").type('123');
