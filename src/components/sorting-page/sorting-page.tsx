@@ -40,7 +40,7 @@ export const SortingPage = () => {
 		}
 	}
 
-	const sortedArrDescend = async (sortin: Direction) => {
+	const sortedArrDescend = async (sorting: Direction) => {
 		setSorting(sorting);
 		setLoading(true);
 		if (sortType === "bubble") {
